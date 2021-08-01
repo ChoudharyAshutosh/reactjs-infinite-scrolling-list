@@ -40,6 +40,7 @@ export default function List(props){
     const showDetails=(id)=>{
         setSelectedId(id)
         document.getElementById('modal').style.display='flex'
+        document.getElementsByClassName('modal-data')[0].scrollTop=0
     }
     //going back to home
     const goBack=()=>{
