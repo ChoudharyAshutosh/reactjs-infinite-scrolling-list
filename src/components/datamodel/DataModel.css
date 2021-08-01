@@ -67,3 +67,11 @@
     text-align: center;
     border-block: none;
 }
+@media screen and (max-width:400px){
+    .item-category{
+        font-size: larger;
+    }
+    .item-name,.close-button{
+        font-size:medium
+    }
+}

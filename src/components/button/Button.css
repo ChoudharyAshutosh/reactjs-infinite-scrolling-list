@@ -13,3 +13,8 @@
     flex-direction: column;
     text-decoration: none;
 }
+@media screen and (max-width:400px) {
+  .menu-button{
+    font-size: large;
+  }
+}

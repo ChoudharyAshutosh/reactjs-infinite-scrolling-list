@@ -6,3 +6,8 @@
     text-transform: uppercase;
     margin-bottom: 2%;
   }
+  @media screen and (max-width:400px) {
+    .welcome-phrase{
+      font-size: large;
+    }
+  }

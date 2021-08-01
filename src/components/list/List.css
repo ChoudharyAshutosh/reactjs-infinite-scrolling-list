@@ -41,3 +41,11 @@
     border-right: 1 px solid darkgrey;
     text-transform: capitalize;
 }
+@media screen and (max-width:400px) {
+    .list-header,.back{
+        font-size: x-large;
+    }
+    .list-item>div:nth-child(1){
+        font-size: larger;
+    }
+}
