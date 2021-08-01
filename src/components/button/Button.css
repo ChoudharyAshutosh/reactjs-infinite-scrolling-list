@@ -1,0 +1,15 @@
+.menu-button{
+    font-size: x-large;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding:10% 30%;
+    border-radius: 50px;
+    background-color: blue;
+    color:white
+  } 
+.list-link{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
