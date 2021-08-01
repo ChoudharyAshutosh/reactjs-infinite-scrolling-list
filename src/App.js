@@ -6,6 +6,7 @@ import './App.css';
 
 function App() {
   useEffect(()=>{
+    //fetching data at loading screen
     fetch('https://jsonblob.com/api/4e6e6a57-eb72-11eb-9eff-b5f91494da60',{
       method:'get',
     })
@@ -18,17 +19,15 @@ function App() {
     .catch((error)=>{console.log(error)})
   },[])
   const [data, setData]=useState(null)
+  //fetching data for infinite loading
   const fetchData=()=>{
     fetch('https://jsonblob.com/api/4e6e6a57-eb72-11eb-9eff-b5f91494da60',{
       method:'get',
     })
     .then((response)=>response.json())
     .then(responseData=>{
-      if(data!=null)
         setData(data.concat(responseData.categorys))
-      else
-      setData(responseData.categorys)
-      console.log(data)
+      
     })
     .catch((error)=>{console.log(error)})
   }

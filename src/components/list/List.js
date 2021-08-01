@@ -3,14 +3,14 @@ import DataModel from '../datamodel/DataModel'
 import './List.css'
 export default function List(props){
     const [selectedId,setSelectedId]=useState(null)
+    //for making list loading infinite
     const scrollCheck=(event)=>{
         console.log(event.target.scrollTop)
         if(event.target.scrollTop>700*(props.list.length/9))
             props.fetchDataAgain()      
-            
-        }
+    }
+    //displaying list
     const renderList=()=>{
-       // console.log(props.list)
        if(props.list===null) return
         let count=0
         console.log(count)
@@ -28,6 +28,7 @@ export default function List(props){
               })
         )
     }
+    //displaying sublist in list
     const renderItems=(sublist)=>{
         return(
             sublist.map(item=>(
@@ -35,10 +36,12 @@ export default function List(props){
             ))
         )
     }
+    //opening modal
     const showDetails=(id)=>{
         setSelectedId(id)
         document.getElementById('modal').style.display='flex'
     }
+    //going back to home
     const goBack=()=>{
         props.history.push("/")
     }

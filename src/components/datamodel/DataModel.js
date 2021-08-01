@@ -1,11 +1,14 @@
 import './DataModel.css'
 export default function DataModel({data,id}){
+    //closing modal
     const closeDetails=()=>{
         document.getElementById('modal').style.display='none'
     }
+    //stopping bubbling at the time of closing modal
     const stopBubbling=(event)=>{
         event.stopPropagation()
     }
+    //rendering modal data
     const renderData=()=>{
         if(data === null) return
         let count=0
@@ -27,6 +30,7 @@ export default function DataModel({data,id}){
             })
         )
     }
+    //rendering sub list in modal
     const renderSubMenu=(items)=>{
         console.log(items)
         return (
@@ -38,6 +42,7 @@ export default function DataModel({data,id}){
             ))
         )
         }
+    //rendering items in sublist
     const renderSubItems=(items)=>{
         console.log(items)
         return(
@@ -52,7 +57,8 @@ export default function DataModel({data,id}){
                 </div>
             ))
         )
-        }
+    }
+    //rendering discount if there is discount
     const renderDiscount=(discount)=>{
         if(discount.amount==="0.00") return
         return(

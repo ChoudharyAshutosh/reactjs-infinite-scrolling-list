@@ -45,10 +45,9 @@
 .item-name{ 
     font-size: large;
     font-weight: bold;
-    margin: 0% 1%;
+    margin: 0% 0% 1% 1%;
 }
 .subitem-detail-container{
-    margin-left: 5%;
     margin: 0% 1% 1% 5%;
     padding: 2%;
     border-radius: 10px;
@@ -58,10 +57,10 @@
     padding-left: 5%;
 }
 .close-button{
-    border-radius: 8px;
+    border-radius: 25px;
     background-color: red;
     color: white;
-    margin: 0px;
+    padding: 0px 5px;
     float: right;
     font-weight: bolder;
     font-size: large;
