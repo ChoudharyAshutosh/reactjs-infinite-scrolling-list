@@ -5,15 +5,13 @@ export default function List(props){
     const [selectedId,setSelectedId]=useState(null)
     //for making list loading infinite
     const scrollCheck=(event)=>{
-        console.log(event.target.scrollTop)
-        if(event.target.scrollTop+100>event.target.offsetHeight)
-            props.fetchDataAgain()      
+        if(event.target.scrollTop>event.target.scrollHeight/2)
+            props.fetchDataAgain()    
     }
     //displaying list
     const renderList=()=>{
        if(props.list===null) return
         let count=0
-        console.log(count)
         return(
             props.list.map(item=>{
                count++
