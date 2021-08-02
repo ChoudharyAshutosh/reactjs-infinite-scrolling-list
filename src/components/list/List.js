@@ -6,7 +6,7 @@ export default function List(props){
     //for making list loading infinite
     const scrollCheck=(event)=>{
         console.log(event.target.scrollTop)
-        if(event.target.scrollTop>700*(props.list.length/9))
+        if(event.target.scrollTop+100>event.target.offsetHeight)
             props.fetchDataAgain()      
     }
     //displaying list
