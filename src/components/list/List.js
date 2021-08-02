@@ -5,7 +5,7 @@ export default function List(props){
     const [selectedId,setSelectedId]=useState(null)
     //for making list loading infinite
     const scrollCheck=(event)=>{
-        if(event.target.scrollTop>event.target.scrollHeight/2)
+        if(event.target.scrollTop>event.target.offsetHeight/2)
             props.fetchDataAgain()    
     }
     //displaying list
